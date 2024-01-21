@@ -30,7 +30,7 @@ public class Main {
         //Задача 4
         System.out.println("Задача 4");
         int age = 5;
-        if (age > 2 && age < 7) {
+        if (age > 2 && age <= 7) {
             System.out.println("Если возраст человека равен " + age + " , то ему нужно ходить в детский сад");
         } else if (age > 7 && age < 17) {
             System.out.println("Если возраст человека равен " + age + " , то ему нужно ходить в школу");
@@ -42,9 +42,9 @@ public class Main {
         //Задача 5
         System.out.println("Задача 5");
         int age1 = 10;
-        if (age1 < 5) {
+        if (age1 <= 5) {
             System.out.println("Если возраст ребенка равен " + age1 + " , то ему нельзя кататься на аттракционе");
-        } else if (age1 > 5 && age1 < 14) {
+        } else if (age1 > 5 && age1 <= 14) {
             System.out.println("Если возраст ребенка равен " + age1 + " , то ему можно кататься на аттракционе в сопровождении взрослого");
         } else if (age1 > 14) {
             System.out.println("Если возраст ребенка равен " + age1 + " , то ему можно кататься на аттракционе без сопровождении взрослого");
@@ -59,16 +59,16 @@ public class Main {
         System.out.println("Всего мест: " + capacityOfOneCarriage);
         System.out.println("Всего сидячих мест: " + seatPlace);
         System.out.println("Всего стоячих мест: " + standingRoom);
-        if(occupiedSeats > 60 && standingRoomOccupied > 42) {
+        if(occupiedSeats > seatPlace && standingRoomOccupied > standingRoom) {
             System.out.println("Нет свободных мест в вагоне");
         }
-        else if(occupiedSeats > 60 && standingRoomOccupied < 42) {
+        else if(occupiedSeats > seatPlace && standingRoomOccupied < standingRoom) {
             System.out.println("Есть свободные стоячие места");
         }
-        else if(occupiedSeats < 60 && standingRoomOccupied > 42) {
+        else if(occupiedSeats < seatPlace && standingRoomOccupied > standingRoom) {
             System.out.println("Есть свободные сидячие места");
         }
-        else if(occupiedSeats < 60 && standingRoomOccupied < 42) {
+        else if(occupiedSeats < seatPlace && standingRoomOccupied < standingRoom) {
             System.out.println("Есть и стоячие и сидячие свободные места в вагоне");
         }
         //Задача 7
